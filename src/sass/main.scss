@@ -1,0 +1,22 @@
+@import './base/vars.scss';
+@import './base/reset.scss';
+
+@import './components/header.scss';
+@import './components/homepage.scss';
+@import './components/footer.scss';
+
+@import './components/contacts.scss';
+@import './components/privacypolicy.scss';
+@import './components/aboutus.scss';
+
+
+.main{
+    padding-top: 82px;
+    background-color: $bet-black;
+    background-image: url('../images/bg_circle.png');
+    opacity: 0.95;
+    height: 100%;
+    @include bp(xl) {
+        padding-top: 72px;
+    }
+}

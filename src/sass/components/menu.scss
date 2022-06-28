@@ -1,0 +1,65 @@
+@import '../base/vars.scss';
+
+.menu{
+    &__btn{
+        width: 30px;
+        height: 30px;
+        position: relative;
+        display: block;
+        line-height: 0;
+        background-image: url('../images/burger-menu.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        @include bp(xl) {
+            display: none;
+        }
+    }
+    &__list{
+        position: absolute;
+        z-index: 5;
+        margin: 0;
+        padding: 10px;
+        height: fit-content;
+        width: 100%;
+        right: 0;
+        top: calc(100% + 20px);
+        transition: all 0.4s ease-out;
+        opacity: 1;
+        list-style: none;
+        background-color: $bet-white;
+        color: $bet-gray;
+        border-top: 3px solid $bet-red;
+        border-radius: 10px;
+        box-shadow: 0 1px 0 rgba($bet-red, 0.2);
+        @include bp(xl) {
+            position: relative;
+            display: flex;
+            border: none;
+            box-shadow: none;
+        }
+    }
+    &__item{
+        padding: 10px;
+        border-bottom: 1px solid rgba(0, 0, 0, .03);
+        @include bp(xl) {
+            padding: 0 10px;
+        }
+    }
+    &__link{
+        color: inherit;
+        text-decoration: none;
+    }
+}
+.hide {
+    transition: all 0.4s ease-out;
+    right: -100%;
+            @include bp(xl) {
+                right: 0;
+            }
+}
+.none{
+    display: none;
+    @include bp(xl) {
+        display: block;
+    }
+}

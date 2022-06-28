@@ -1,0 +1,77 @@
+@import '../base//vars.scss';
+
+.aboutus{
+    padding: 50px 0;
+    margin: 0 auto;
+    width: 80%;
+    height: calc(100vh + 200px);
+    background-color: $bet-black;
+    @include bp(md) {
+        padding: 50px;
+    }
+    &__text-block{
+        position: relative;
+        text-align: center;
+        background-color: $bet-white;
+        border-radius: 20vw;
+        padding: 50px 30px;
+        @include bp(md) {
+            margin: 0;
+            padding: 90px 70px;
+        }
+        @include bp(xl) {
+            max-width: 720px;
+        }
+    }
+    &__title{
+        font-family: 'Pacifico';
+        text-transform: capitalize;
+        margin-bottom: 40px;
+        font-size: 36px;
+        @include bp(md) {
+            margin-bottom: 50px;
+            font-size: 42px;
+        }
+        @include bp(xl) {
+            font-size: 56px;
+        }
+    }
+    &__text{
+        margin-bottom: 30px;
+        line-height: 26px;
+        @include bp(xl) {
+            font-size: 22px;
+        }
+    }
+    &__img{
+        position: absolute;
+        z-index: 1;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        bottom: -30%;
+        right: 30%;
+        transform: translateX(50%);
+        @include bp(s) {
+            width: 300px;
+            height: 300px;
+            bottom: -55%;
+        }
+        @include bp(md) {
+            width: 400px;
+            height: 400px;
+            bottom: -60%;
+        }
+        @include bp(xl) {
+            right: -10%;
+            bottom: -50%;
+            transform: translateX(0);
+        }
+        @include bp(xxl) {
+            width: 500px;
+            height: 500px;
+            right: -35%;
+            bottom: -60%;
+        }
+    }
+}

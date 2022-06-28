@@ -1,0 +1,30 @@
+@import './menu.scss';
+@import '../base/vars.scss';
+
+.header {
+    position: fixed;
+    padding: 20px 0;
+    box-shadow: 0 1px #0000001a;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+    @include bp(xl) {
+        padding: 5px 0;
+    }
+    &__container{
+        position: relative;
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        & img{
+            height: 40px;
+            @include bp(xl) {
+                height: 60px;
+            }
+        }
+    }
+}

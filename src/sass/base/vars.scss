@@ -1,0 +1,33 @@
+// -----font------
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+// -----colors------
+$bet-white: #ffffff;
+$bet-black: #000000;
+$bet-gray: #666666;
+$bet-red: #800000;
+
+
+$breakpoints: (
+    s: 414px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1140px,
+    xxl: 1440px,
+    xxxl: 1920px) !default;
+
+@mixin media($width) {
+    @media(min-width: $width) {
+        @content;
+    }
+}
+
+@mixin bp($name) {
+    $width: map-get($breakpoints, $name);
+
+    @include media($width) {
+        @content;
+    }
+}

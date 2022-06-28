@@ -1,0 +1,123 @@
+@import '../base/vars.scss';
+
+.homepage{
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+        @include bp(xl) {
+            display: flex;
+            justify-content: space-between;
+        }
+    &__content{
+        padding: 40px 0;
+        background-size: contain;
+        @include bp(xl) {
+            width: 50%;
+        }
+    }
+    &__title-container{
+        padding: 35px 0;
+        margin-bottom: 20px;
+        background-image: url('../images/homepage_bg-img.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: #fff;
+        @include bp(xl) {
+            margin-bottom: 40px;
+            padding: 50px 0;
+        }
+    }
+    &__title{
+        font-size: 36px;
+        font-family: 'Pacifico';
+        @include bp(xl) {
+            font-size: 60px;
+        }
+    }
+    &__established{
+        margin: 0 auto 30px;
+        padding: 5px;
+        width: fit-content;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #fff;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        @include bp(xl) {
+            font-size: 16px;
+            margin-bottom: 50px;
+        }
+    }
+    &__btn{
+        display: inline-block;
+        padding: 15px;  
+        width: 80%;
+        max-width: 300px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+        background-color: white;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;   
+        &:hover,
+        &:focus {
+            color: $bet-red;
+            font-weight: 500;
+            transform: scale(1.05);
+            border: 2px solid $bet-red;
+        }
+        @include bp(xl) {
+            letter-spacing: 2px;
+        }
+    }
+
+    &__image-block{
+        padding-bottom: 50px;
+        @include bp(xl) {
+            width: 50%;
+        }
+    }
+    &__top-block{
+        @include bp(xl) {
+            margin-top: -70px;
+        }
+    }
+    &__top-img{
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        @include bp(md) {
+            width: 450px;
+            height: 450px;
+        }
+        @include bp(xl) {
+            width: 550px;
+            height: 550px;
+        }
+    }
+    &__bottom-block{
+        margin-top: -110px;
+        margin-left: 100px;
+        @include bp(xl) {
+            margin-top: -210px;
+            margin-left: -300px;
+        }
+    }
+    &__bottom-img{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        @include bp(md) {
+            width: 300px;
+            height: 300px;
+        }
+        @include bp(xl) {
+            width: 400px;
+            height: 400px;
+        }
+    }
+}

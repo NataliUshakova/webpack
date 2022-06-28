@@ -1,0 +1,93 @@
+@import './header.scss';
+@import './footer.scss';
+@import '../base/vars.scss';
+
+.contacts{
+    height: calc(100vh - 20px);
+    background-image: url('../images/bg-contacts.jpg');
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    background-color: linear-gradient(black, red);
+    min-height: 800px;
+    &__block{
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        left: 50%;
+        width: 80%;
+        margin: 0 auto;
+        padding: 50px;
+        transform: translate(-50%, 0);
+        background-color: $bet-white;
+        border-radius: 0 0 500px 500px;
+        box-shadow: 0px 15px 65px -30px rgb(0 0 0 / 25%);
+        @include bp(s) {
+            padding: 80px 50px;
+        }
+        @include bp(lg) {
+            max-width: 900px;
+            padding: 50px;
+        }
+    }
+    &__title {
+        margin-bottom: 30px;
+        font-family: 'Pacifico';
+        font-size: 36px;
+        line-height: 50px;
+        @include bp(xl) {
+            font-size: 42px;
+            line-height: 56px;
+            margin-bottom: 50px;
+        }
+    }
+    &__cont{
+        padding-top: 80px;
+        border-top: 1px solid $bet-gray;
+        @include bp(md) {
+            padding: 100px;
+        }
+    }
+    &__address, &__tel{
+        display: block;
+        text-decoration: none;
+        color: $bet-black;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        transition: all 0.4s ease-in-out;
+        line-height: 24px;
+        &:not(:last-child){
+            margin-bottom: 40px;
+        }
+        &:hover, &:focus{
+            color: $bet-red;
+            font-weight: 500;
+            transform: scale(1.1);
+        }
+    }
+    &__bottom-vawe{
+        position: absolute;
+        bottom: 50;
+        width: 100%;
+        background-image: url('../images/contacts-bottom-vawe.svg');
+        background-color: transparent;
+        background-repeat: repeat no-repeat;
+        height: 170px;
+        padding-bottom: 100px;
+        opacity: 0.8;
+        @include bp(xl) {
+            height: 320px;
+        }
+        &__circle{
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            height: 50%;
+            width: 100%;
+            background-image: url('../images/bg_circle.png');
+            background-repeat: repeat no-repeat;
+            background-size: contain;
+            background-color: $bet-black;
+        }
+    }
+}
